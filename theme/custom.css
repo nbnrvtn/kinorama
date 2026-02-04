@@ -6,7 +6,7 @@
    CUSTOM PROPERTIES
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 :root {
-  --kinoFooterText: "Kinorama v2.1.5";
+  --kinoFooterText: "Kinorama v2.1.6";
   color-scheme: dark;
 
   /* ── Gradient points (overridden by Theme → black palette) ── */
@@ -1883,17 +1883,35 @@ progress + span {
   color: var(--textColor) !important;
 }
 
-/* ── default (resting) brand colours ── */
-.layout-desktop
-  .itemExternalLinks.focuscontainer-x
-  > a[href*="themoviedb.org"] {
+/* ── default (resting) brand colours – same on all devices ── */
+.itemExternalLinks.focuscontainer-x > a[href*="themoviedb.org"] {
   background-color: rgb(26, 183, 216) !important;
-  color: #000 !important;
+  color: black !important;
 }
 
-.layout-desktop .itemExternalLinks.focuscontainer-x > a[href*="imdb.com"] {
+.itemExternalLinks.focuscontainer-x > a[href*="imdb.com"] {
   background-color: rgb(226, 182, 22) !important;
-  color: #000 !important;
+  color: black !important;
+}
+
+.itemExternalLinks.focuscontainer-x > a[href*="thetvdb.com"] {
+  background-color: rgb(108, 213, 145) !important;
+  color: black !important;
+}
+
+.itemExternalLinks.focuscontainer-x > a[href*="trakt.tv"] {
+  background-color: rgb(171, 58, 173) !important;
+  color: var(--textColor) !important;
+}
+
+.itemExternalLinks.focuscontainer-x > a[href*="theaudiodb.com"] {
+  background-color: rgb(99, 153, 204) !important;
+  color: rgb(15, 22, 28) !important;
+}
+
+.itemExternalLinks.focuscontainer-x > a[href*="musicbrainz.org"] {
+  background-color: rgb(186, 71, 143) !important;
+  color: var(--textColor) !important;
 }
 
 /* ── active (tap) states ── */
