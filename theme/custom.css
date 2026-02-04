@@ -6,7 +6,7 @@
    CUSTOM PROPERTIES
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 :root {
-  --elegantFinFooterText: "Kinorama v2.1.2";
+  --elegantFinFooterText: "Kinorama v2.1.1";
   color-scheme: dark;
 
   /* ── Gradient points (overridden by Theme → black palette) ── */
@@ -3298,7 +3298,9 @@ div[data-role="controlgroup"] a.ui-btn-active {
     filter: brightness(1.25);
   }
 
-  .layout-desktop .itemExternalLinks.focuscontainer-x > a:hover {
+  .layout-desktop
+    .itemExternalLinks.focuscontainer-x
+    > a:hover:not([href*="imdb.com"]):not([href*="themoviedb.org"]) {
     background-color: var(--activeColor) !important;
     color: white !important;
   }
