@@ -6,7 +6,7 @@
    CUSTOM PROPERTIES
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 :root {
-  --kinoFooterText: "Kinorama v2.1.4";
+  --kinoFooterText: "Kinorama v2.1.5";
   color-scheme: dark;
 
   /* ── Gradient points (overridden by Theme → black palette) ── */
@@ -76,9 +76,10 @@
     var(--lighterGradientPoint)
   );
   --headerColorGradient: none; /* overridden by Theme */
+  /* Mobile top nav: neutral gradient (no blue hue) to match theme */
   --headerColorGradientAlt: linear-gradient(
     180deg,
-    rgba(30, 40, 54, 1),
+    hsla(0, 0%, 7%, 0.95),
     70%,
     transparent
   );
@@ -3243,6 +3244,15 @@ div[data-role="controlgroup"] a.ui-btn-active {
 
   .checkboxContainer:hover .checkboxOutline:not(.multiSelectCheckboxOutline) {
     border-color: var(--checkboxCheckedBgColor);
+    border-width: var(--borderWidthDouble);
+  }
+
+  /* Settings > Home (accueil) – checkbox in listItem without .checkboxContainer */
+  .listItem:hover .checkboxOutline:not(.multiSelectCheckboxOutline),
+  .emby-checkbox:hover
+    + span
+    + .checkboxOutline:not(.multiSelectCheckboxOutline) {
+    border-color: var(--highlightOutlineColor) !important;
     border-width: var(--borderWidthDouble);
   }
 
